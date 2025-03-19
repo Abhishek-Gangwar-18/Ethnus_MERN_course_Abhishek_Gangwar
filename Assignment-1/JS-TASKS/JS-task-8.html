@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .input-group {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-group input, select {
+            width: 90%;
+            padding: 8px;
+            padding-left: 30px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            text-align: justify;
+            margin-top: 2px;
+        }
+
+        .checkbox-group {
+            text-align: left;
+        }
+
+        button {
+            width: 100%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <label>First Name</label>
+        <div class="input-group">
+            <i>👤</i>
+            <input type="text" id="firstName">
+        </div>
+        <span class="error" id="errorFirstName"></span>
+
+        <label>Last Name</label>
+        <div class="input-group">
+            <i>👤</i>
+            <input type="text" id="lastName">
+        </div>
+        <span class="error" id="errorLastName"></span>
+
+        <label>Email</label>
+        <div class="input-group">
+            <i>📧</i>
+            <input type="email" id="email">
+        </div>
+        <span class="error" id="errorEmail"></span>
+
+        <label>Password</label>
+        <div class="input-group">
+            <i>🔑</i>
+            <input type="password" id="password">
+        </div>
+        <span class="error" id="errorPassword"></span>
+
+        <label>Re-enter Password</label>
+        <div class="input-group">
+            <i>🔑</i>
+            <input type="password" id="rePassword">
+        </div>
+        <span class="error" id="errorRePassword"></span>
+
+        <label>Gender</label>
+        <div class="checkbox-group">
+            <input type="radio" name="gender" id="male"> Male
+            <input type="radio" name="gender" id="female"> Female
+        </div>
+        <span class="error" id="errorGender"></span>
+
+        <label>Phone Number</label>
+        <div class="input-group">
+            <i>📞</i>
+            <input type="number" id="phone">
+        </div>
+        <span class="error" id="errorPhone"></span>
+
+        <label>State</label>
+        <div class="input-group">
+            <input type="text" id="state">
+        </div>
+        <span class="error" id="errorState"></span>
+
+        <label>Country</label>
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+        </select>
+        <span class="error" id="errorCountry"></span>
+
+        <label>Language Known</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="english"> Hindi
+            <input type="checkbox" id="hindi"> English
+            <input type="checkbox" id="french"> Kannada
+            <input type="checkbox" id="telugu"> Telugu
+        </div>
+        <span class="error" id="errorLanguage"></span>
+
+        <label>
+            <input type="checkbox" id="declaration"> Hereby I declare all details are true
+        </label>
+        <span class="error" id="errorDeclaration"></span>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let isValid = true;
+
+        function showError(id, message) {
+            document.getElementById(id).innerText = message;
+            isValid = false;
+        }
+
+        function clearError(id) {
+            document.getElementById(id).innerText = "";
+        }
+
+        let firstName = document.getElementById("firstName").value.trim();
+        let lastName = document.getElementById("lastName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let rePassword = document.getElementById("rePassword").value.trim();
+        let male = document.getElementById("male").checked;
+        let female = document.getElementById("female").checked;
+        let phone = document.getElementById("phone").value.trim();
+        let state = document.getElementById("state").value;
+        let country = document.getElementById("country").value;
+        let declaration = document.getElementById("declaration").checked;
+
+        let english = document.getElementById("english").checked;
+        let hindi = document.getElementById("hindi").checked;
+        let french = document.getElementById("french").checked;
+
+        if (!firstName) showError("errorFirstName", "First name is required"); else clearError("errorFirstName");
+        if (!lastName) showError("errorLastName", "Last name is required"); else clearError("errorLastName");
+        if (!email.includes("@")) showError("errorEmail", "Invalid email"); else clearError("errorEmail");
+        if (password.length < 6) showError("errorPassword", "Password must be at least 6 characters"); else clearError("errorPassword");
+        if (password !== rePassword) showError("errorRePassword", "Passwords do not match"); else clearError("errorRePassword");
+        if (!male && !female) showError("errorGender", "Select a gender"); else clearError("errorGender");
+        if (!/^\d+$/.test(phone) || phone.length < 10) showError("errorPhone", "Enter a valid 10-digit phone number"); else clearError("errorPhone");
+        if (!state) showError("errorState", "Enter a state"); else clearError("errorState");
+        if (!country) showError("errorCountry", "Select a country"); else clearError("errorCountry");
+        if (!english && !hindi && !french) showError("errorLanguage", "Select at least one language"); else clearError("errorLanguage");
+        if (!declaration) showError("errorDeclaration", "You must accept the declaration"); else clearError("errorDeclaration");
+
+        if (isValid) alert("Registration Successful!");
+    });
+</script>
+
+</body>
+</html>
