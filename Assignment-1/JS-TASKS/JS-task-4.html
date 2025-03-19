@@ -52,8 +52,12 @@
 
   <script>
     function showDate() {
-      let currentDate = new Date().toLocaleDateString();
-      document.getElementById('result').textContent = `Current Date: ${currentDate}`;
+      let now = new Date();
+      let day = String(now.getDate()).padStart(2, '0'); // Ensure two-digit day
+      let month = String(now.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+      let year = now.getFullYear();
+      let formattedDate = `${day}/${month}/${year}`;
+      document.getElementById('result').textContent = `Current Date: ${formattedDate}`;
     }
 
     function showTime() {
