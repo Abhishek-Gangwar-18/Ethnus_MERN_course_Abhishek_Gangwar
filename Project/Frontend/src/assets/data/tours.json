@@ -1,0 +1,172 @@
+[
+  {
+    "title": "Taj Mahal",
+    "city": "Agra",
+    "address": "Dharmapuri, Forest Colony, Tajganj, Agra",
+    "distance": 230,
+    "price": 499,
+    "maxGroupSize": 20,
+    "desc": "A symbol of eternal love and one of the Seven Wonders of the World.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.9
+      }
+    ],
+    "photo": "/tour-images/tour-img01.jpg",
+    "featured": true
+  },
+  {
+    "title": "Jaipur City Palace",
+    "city": "Jaipur",
+    "address": "J.D.A. Market, Jaleb Chowk, Jaipur",
+    "distance": 280,
+    "price": 399,
+    "maxGroupSize": 15,
+    "desc": "A magnificent royal palace featuring Rajasthani and Mughal architecture.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.7
+      }
+    ],
+    "photo": "/tour-images/tour-img02.jpg",
+    "featured": true
+  },
+  {
+    "title": "Jim Corbett National Park",
+    "city": "Nainital",
+    "address": "Ramnagar, Uttarakhand",
+    "distance": 250,
+    "price": 599,
+    "maxGroupSize": 10,
+    "desc": "Famous for Bengal tigers, safaris, and natural beauty.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.6
+      }
+    ],
+    "photo": "/tour-images/tour-img03.jpg",
+    "featured": true
+  },
+  {
+    "title": "Rishikesh Ganga Aarti",
+    "city": "Rishikesh",
+    "address": "Triveni Ghat, Rishikesh",
+    "distance": 240,
+    "price": 299,
+    "maxGroupSize": 12,
+    "desc": "Spiritual experience of Ganga Aarti at the holy banks of Rishikesh.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.8
+      }
+    ],
+    "photo": "/tour-images/tour-img04.jpg",
+    "featured": true
+  },
+  {
+    "title": "Neemrana Fort",
+    "city": "Neemrana",
+    "address": "Neemrana, Alwar District, Rajasthan",
+    "distance": 120,
+    "price": 349,
+    "maxGroupSize": 8,
+    "desc": "A historic 15th-century fort converted into a heritage hotel.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.5
+      }
+    ],
+    "photo": "/tour-images/tour-img05.jpg",
+    "featured": true
+  },
+  {
+    "title": "Chandni Chowk Food Walk",
+    "city": "Delhi",
+    "address": "Old Delhi, near Red Fort",
+    "distance": 5,
+    "price": 199,
+    "maxGroupSize": 6,
+    "desc": "Delve into Delhi's street food scene with rich Mughlai flavors.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.7
+      }
+    ],
+    "photo": "/tour-images/tour-img06.jpg",
+    "featured": true
+  },
+  {
+    "title": "Sultanpur Bird Sanctuary",
+    "city": "Gurgaon",
+    "address": "Sultanpur, Haryana",
+    "distance": 50,
+    "price": 150,
+    "maxGroupSize": 10,
+    "desc": "A haven for bird watchers with migratory birds in winter.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.3
+      }
+    ],
+    "photo": "/tour-images/tour-img07.jpg",
+    "featured": true
+  },
+  {
+    "title": "Mussoorie Hill Station",
+    "city": "Mussoorie",
+    "address": "Dehradun District, Uttarakhand",
+    "distance": 280,
+    "price": 499,
+    "maxGroupSize": 12,
+    "desc": "Charming hill station with colonial architecture and cool climate.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.8
+      }
+    ],
+    "photo": "/tour-images/tour-img03.jpg",
+    "featured": true
+  },
+  {
+    "title": "Surajkund Mela",
+    "city": "Faridabad",
+    "address": "Surajkund, Haryana",
+    "distance": 30,
+    "price": 99,
+    "maxGroupSize": 5,
+    "desc": "Cultural fair showcasing traditional crafts, food, and music.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.4
+      }
+    ],
+    "photo": "/tour-images/tour-img08.jpg",
+    "featured": false
+  },
+  {
+    "title": "Bharatpur Bird Sanctuary",
+    "city": "Bharatpur",
+    "address": "Keoladeo Ghana National Park, Rajasthan",
+    "distance": 220,
+    "price": 199,
+    "maxGroupSize": 8,
+    "desc": "UNESCO World Heritage Site, home to thousands of birds.",
+    "reviews": [
+      {
+        "name": "Avi Sharma",
+        "rating": 4.6
+      }
+    ],
+    "photo": "/tour-images/tour-img09.jpg",
+    "featured": false
+  }
+]
